@@ -6,6 +6,7 @@ text-align: center;
 vertical-align: middle;
 padding: 90px;
 border-radius: 50px;
+min-width:fit-content;
 }
 
 .head{
