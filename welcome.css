@@ -1,0 +1,29 @@
+
+.welcome{
+display: grid;
+grid-template-rows: 1fr;
+text-align: center;
+vertical-align: middle;
+padding: 90px;
+border-radius: 50px;
+}
+
+.head{
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    background-color: black;
+    border-radius: 25px;
+    padding: 50px;
+}
+
+.wt{
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.wt:hover{
+    font-weight: bold;
+
+}

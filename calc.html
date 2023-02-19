@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>Document</title>
+
+     <style>
+
+        body{
+            background-color: rgb(26, 25, 25);
+        }
+        
+        .interface{
+            display: grid;
+            justify-content: center;
+            vertical-align: middle;
+        }
+
+        .r1,.r2,.r3,.r4{
+            display: grid;
+            grid-template-columns: 100px 100px 100px 100px;
+            text-align: center;
+            align-items: center;
+            margin-top: 10px;
+            row-gap: 10px;
+            column-gap: 10px;
+            
+        }
+
+        .screen{
+            text-align: center;
+            margin-top: 90px;
+            height: 90px ;
+            width: 425px;
+            
+            
+        }
+
+        .text-box-c{
+            display: flex;
+            height: 50px;
+            flex: 2;
+        }
+
+        .text-box{
+            width: 420px;
+            height: 85px;
+            font-size: 70px;
+            border-radius: 20px;
+            background-color:transparent; 
+            border-style: solid;
+            border-color: white; 
+            border-width: 4px; 
+            color: white;     
+            outline: none;       
+        }
+
+        .num-btn{
+            width: 100%;
+            height: 100%;
+            font-size: 50px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .num-btn:hover{
+            box-shadow: inset 1px 1px 5px;
+        }  
+        
+        .num-btn:active{
+            opacity: 0.5;
+        }
+
+        .reset{
+            margin-top: 10px;
+        }
+
+     </style>
+    <link rel="stylesheet" href="/style.css"/>
+
+</head>
+
+<body>
+    <div class="header">
+  
+        <div class="section-1">
+            <div class="logo-c">
+                <label class="logo">
+                    <a href="http://127.0.0.1:5500/index.html"> 
+                        Calck 
+                    </a>  
+                </label>
+            </div>
+        </div>
+        <div class="section-2">
+            <div class="tools">
+                <button class="toolbtn">
+                    <a href="/tools.html">
+                    Tools
+                    </a>
+                </button>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <div class="interface">
+
+            <div class="screen">
+
+                <div class="text-box-c">
+                    <input id="input-num"  class="text-box" type="text"/>
+                </div>
+
+            </div>
+        
+            <div class="r1">
+
+                <div class="num">
+                    <button onclick="func(1)"class="num-btn">
+                        1
+                    </button>
+                </div>
+                
+                <div class="num">
+                    <button class="num-btn" onclick="func(2)">
+                        2
+                    </button>
+                </div>
+
+                <div class="num">
+                    <button class="num-btn"onclick="func(3)">
+                        3
+                    </button>
+                </div>
+
+                <!--+-->
+                <div class="num">
+                    <button class="num-btn" onclick="func('+')">
+                        &#43
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="r2">
+
+                <div class="num">
+                    <button class="num-btn" onclick="func(4)">4</button>
+                </div>
+                
+                <div class="num">
+                    <button class="num-btn" onclick="func(5)">5</button>
+                </div>
+                
+                <div class="num">
+                    <button class="num-btn" onclick="func(6)">6</button>
+                </div>
+                
+                <div class="num">
+                    <button class="num-btn" onclick="func('-')">&#8722</button>
+                </div>
+
+            </div>
+
+            <div class="r3">
+
+                <div class="num">
+                    <button class="num-btn"onclick="func(7)">7</button>
+                </div>
+                
+                <div class="num">
+                    <button class="num-btn" onclick="func(8)">8</button>
+                </div>
+                
+                <div class="num">
+                    <button class="num-btn" onclick="func(9)">9</button>
+                </div>
+                
+                <div class="num">
+                    <button class="num-btn" onclick="func('/')">&divide</button>
+                </div>
+
+            </div>
+
+            <div class="r4">
+                <div class="num">
+                    <button class="num-btn" onclick="func('.')">.</button>
+                </div>
+                
+                <div class="num">
+                    <button class="num-btn" onclick="func(0)">0</button>
+                </div>
+                
+                <!--=-->
+                <div class="num">
+                    <button class="num-btn" onclick="eq()">
+                        &#61
+                    </button>
+                </div>
+                
+                <div class="num">
+                    <button class="num-btn" onclick="func('*')">&times</button>
+                </div>
+            </div>
+
+             <div class="reset">
+                <div class="num">
+                    <button class="num-btn" onclick="reset()">reset</button>
+                </div>
+
+            </div>
+
+    </div>
+
+    <script>
+
+        
+
+        function func(num){
+            
+            document.getElementById("input-num").value +=num;
+
+        }
+
+        // function op(oper){
+            // document.getElementById("input-num").innerHTML=oper;
+            // document.getElementById("input-num").value=''
+            // 
+        // }
+
+        
+        
+        
+        
+        
+        function eq(){
+            let x = document.getElementById("input-num").value;
+            let y = eval(document.getElementById("input-num").value);
+            document.getElementById("input-num").value=''
+            document.getElementById("input-num").value+=y
+            console.log(y); 
+        }
+
+        function reset()
+        {
+            document.getElementById("input-num").value=''
+
+        }
+
+           
+           
+           
+
+        
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+.counter {
+    margin-left:100px;
+    margin-top: 100px;
+    margin-right:100px;
+    padding: 80px;
+    background-color: black;
+    border-radius: 50px;
+    min-width: fit-content;
+}  
+#countl{
+    display: block;
+    text-align: center;    
+    padding: 60px;
+    border-radius: 50px;            
+    height: 100px;
+    font-size: 100px;
+    background-color: whitesmoke;
+}
+
+.btns{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+}
+.btns button {
+    height: 50px;
+    font-weight: bold;
+    font-size: 100%;
+    border: solid;
+    border-width: 2px;
+    background-color: black;
+    color: white;
+    min-width: 100px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.btns button:hover{
+    background-color: white;
+    color: black;
+}
+.btns button:active{
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    box-shadow: inset 1px 1px 5px ;
+}
